@@ -34,6 +34,14 @@ public class Registro {
         return null;
     }
 
+    public Boolean prueba() {
+        if (pulpo != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public String cambiarBoolean() {
         if (pulpo == true) {
             pulpo = Boolean.valueOf("Sí");
