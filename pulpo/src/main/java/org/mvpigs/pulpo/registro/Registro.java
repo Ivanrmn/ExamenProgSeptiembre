@@ -17,6 +17,9 @@ public class Registro {
     }
 
     public List<String> mostrarRegistro() throws Exception {
+
+        cambiarBoolean();
+
         try {
             if (!eventos.isEmpty()) {
                 return eventos;
@@ -27,6 +30,7 @@ public class Registro {
 
         System.out.println("Registro: " + eventos);
         System.out.println("Pulpo: " + cambiarBoolean());
+
         return null;
     }
 
