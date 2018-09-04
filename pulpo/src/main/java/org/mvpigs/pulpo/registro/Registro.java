@@ -16,8 +16,27 @@ public class Registro {
         return null;
     }
 
-    public void mostrarRegistro() {
+    public List<String> mostrarRegistro() throws Exception {
+        try {
+            if (!eventos.isEmpty()) {
+                return eventos;
+            }
+        } catch (Exception e) {
+            throw new Exception("No hay eventos en el registro");
+        }
 
+        System.out.println("Registro: " + eventos);
+        System.out.println("Pulpo: " + cambiarBoolean());
+        return null;
+    }
+
+    public String cambiarBoolean() {
+        if (pulpo == true) {
+            pulpo = Boolean.valueOf("Sí");
+        } else {
+            pulpo = Boolean.valueOf("No");
+        }
+        return String.valueOf(pulpo);
     }
 
 }
